@@ -62,8 +62,8 @@ Hold your cursor on the target and move the mouse wheel up and down.
 
 <article>
 
-<img id="lettera" data-content: "a" src="{% static 'images/a.jpeg' %}" alt="letter a" align="middle" float: center; style="width: 300px;">
-<img id="target" src="{% static 'images/target.jpg' %}" alt="a target" align="middle" style="width: 300px;">
+<img id="lettera" data-content: "a" src="/static/images/a.jpeg" alt="letter a" align="middle" float: center; style="width: 300px;">
+<img id="target" src="/static/images/target.jpg" alt="a target" align="middle" style="width: 300px;">
 
 </article>
 
@@ -96,11 +96,11 @@ window.onload = function() {
 		var e = window.event || e;
 
 		if (letter == "a"){
-			document.getElementById("lettera").src="{% static 'images/z.jpeg' %}";
+			document.getElementById("lettera").src="/static/images/z.jpeg";
 			letter = "z";
 			return;
 		} else if (letter == "z"){
-			document.getElementById("lettera").src="{% static 'images/a.jpeg' %}";
+			document.getElementById("lettera").src="/static/images/a.jpeg";
 			letter = "a";
 		}
 
