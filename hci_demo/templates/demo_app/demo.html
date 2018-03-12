@@ -329,9 +329,13 @@ function doubleClick() {
 			document.getElementById("middlebutton").className = "hover";
 			document.getElementById("bottombutton").className = "btn";
 
-			var str = document.getElementById("inputArea").innerHTML;
-			str = str.substring(0, str.length - 1); 
-			document.getElementById("selected").innerHTML = str;
+			clearTimeout(myVar);
+
+			var str = document.getElementById("inputArea").value;
+			var str2 = str.substring(0, str.length - 1); 
+			console.log(str2);
+			document.getElementById("inputArea").value = str2;
+			console.log("updated inner html");
 }
 
 function addChar() {
