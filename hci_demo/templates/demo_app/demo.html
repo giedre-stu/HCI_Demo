@@ -186,12 +186,16 @@ Hold your cursor on the middle button and move the mouse wheel up and down.
 			console.log(delta);
 
 			if (delta == -1) {
-				position++;
+				if (position != 1) {
+						position++;
+					}
 				console.log(position);
 			}
 
 			if (delta == 1) {
-				position--;
+				if (position != -1) {
+					position--;
+				}
 				console.log(position);
 			}
 
