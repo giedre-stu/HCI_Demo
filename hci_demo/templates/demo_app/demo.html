@@ -121,6 +121,12 @@ Hold your cursor on the middle button and move the mouse wheel up and down.
 
 <article>
 
+<div class ="select" id = "postcode" align="middle" float: center> </div>
+
+ </br> 
+ </br> 
+
+
  <div align="middle" float: center;> 
  	<input id = "inputArea" class = "input" size = "10" type = "text" > </br> 
  </div>
@@ -160,6 +166,30 @@ Hold your cursor on the middle button and move the mouse wheel up and down.
 	var letter = "x";
 	var clicks = 0; 
 	var myVar;
+	var postcodes = [
+	"C285KV",
+	"2T8CBA",
+	"K5LUB5",
+	"J8VBL5",
+	"KKLC2C",
+	"258VBA",
+	"5KL3UV",
+	"8AV5CA",
+	"BC8T2B",
+	"C2AVUT",
+	"5BTTTT",
+	"V2CAJ5",
+	"BTV2U5",
+	"KCB8VU",
+	"2BTKVC",
+	"AVCB82",
+	"CVK5VT",
+	"L2CVUT"
+	];
+	var postcodeid = 0; 
+
+	var currentPostcode = postcodes[0];
+	document.getElementById("postcode").innerHTML = currentPostcode;
 
 	window.onload = function() {
 
@@ -360,6 +390,17 @@ function addChar() {
 	document.getElementById("topbutton").className = "btn";
 	document.getElementById("middlebutton").className = "hover";
 	document.getElementById("bottombutton").className = "btn";
+
+	var check1 = document.getElementById("inputArea").value;
+	console.log(check1 + "check1");
+	if (check1 == currentPostcode) {
+		console.log("caught");
+		postcodeid++;
+		currentPostcode = postcodes[postcodeid];
+		document.getElementById("postcode").innerHTML = currentPostcode;
+		document.getElementById("inputArea").value="";
+	}
+
 
 
 }
